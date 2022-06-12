@@ -6,8 +6,26 @@
         <input required id="custom\_photo" type="file" name="properties\[Photo\]"> 
     </div>
     <div class="line-item-property\_\_field"> 
-        <label for="custom\_photo">Photo width above 500px)</label> 
+        <label for="custom\_photo">Photo width above 500px</label> 
         <input required id="custom\_photo" type="file" name="properties\[Photo\]"> 
     </div>
     
 </div>
+
+{% schema %}
+  {
+  "name": "new upload form",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "New upload Form"
+    }
+  ]
+}
+{% endschema %}
+
+{
+    function verifyFileUpload(e)
+    if ( file && files.length > 500)  
+}
