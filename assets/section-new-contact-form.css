@@ -1,0 +1,37 @@
+.section-row{
+	display:flex
+      width: 100vw;
+}
+
+.main-heading{
+	text-align: center;
+}
+
+.row{
+	width: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+  	padding: 10px;
+}
+.single-row input{
+  width: 49vw;
+}
+
+label{
+  color: black;
+}
+
+input{
+	width: 24vw;
+    height: 3vh;
+  margin: 0 .5vw;
+}
+
+textarea{
+	width: 49vw;
+  	height: 5vh;
+}
+::placeholder{
+	padding-left: 10px;
+}

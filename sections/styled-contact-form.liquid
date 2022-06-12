@@ -1,0 +1,88 @@
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+<div class="">
+	{% form contact', id: 'ContactForm'%}
+  		<div class="row">
+  			<div class="user-first-name">
+				<label for="{{ formId }}-first-name" placeholder="First Name">{{contact.form.first_name}}</label>
+				<input
+					id="{{ formId}}-first-name"
+					name="contact[first_name]"
+					value="{{ form[first_name] }}"
+					aria-required="true"
+					type="text"
+				>
+			</div>
+			<div class="user-last-name">
+				<label for="{{ formId }}-name" placeholder="Last Name">{{contact.form.last_name}}</label>
+				<input
+					id="{{ formId}}-last-name"
+					name="contact[last_name]"
+					value="{{ form[last_name] }}"
+					aria-required="true"
+					type="text"
+				>
+			</div>
+		</div>
+		<div class="row">
+			<div class="user-company-name">
+				<label for="{{ formId }}-company-name" placeholder="Company Name ">{{contact.form.company_name}}</label>
+				<input
+					id="{{ formId}}-company-name"
+					name="contact[company_name]"
+					value="{{ form[company_name] }}"
+					aria-required="true"
+					type="text"
+				>
+			</div>
+  		</div>
+		<div class="row">
+			<div class="user-email">
+				<label for="{{ formId }}-email" placeholder="Email">{{contact.form.email}}</label>
+				<input
+					id="{{ formId}}-first-name"
+					name="contact[first_name]"
+					value="{{ form[first_name] }}"
+					aria-required="true"
+					type="email"
+				>
+			</div>
+			<div class="user-phone-number">
+				<label for="{{ formId }}-phone-number" placeholder="Phone(Optional)">{{contact-form.phone}}</label>
+				<input type="text"
+					id="{{ formId}}-phone"
+					name="contact[phone]"
+					value="{{ form[phone] }}"
+					aria-required="false"
+					type="tel"
+					pattern="[0]{1}[0-9]{10}"
+				>
+			</div>
+		</div>
+		<div class="row">
+			<div class="user-message">
+				<label for="{{ formId }}-message">{{contact.form.message}}</label>
+				<textarea 
+					name="contact[body]" 
+					id="{{ formId}}-message"
+					value="{{ formId }}-message"
+					type="text"
+					aria-required="true"
+					></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<button type="submit" class="button">
+				{{ 'templates.contact.form.send'}}
+			  </button>
+		</div>
+  	{% endform %}
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}

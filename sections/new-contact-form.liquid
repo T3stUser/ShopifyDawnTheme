@@ -1,0 +1,105 @@
+{{ 'section-new-contact-form.css' | asset_url | stylesheet_tag }}
+
+<div class="section-row">
+  <h1 class="main-heading">Tell Us Your Cake Ideas...</h1>
+	{% form 'contact', id: 'ContactForm'%}
+  		<div class="row">
+  			<div class="user-first-name">
+				<label for="{{ formId }}-first-name" >{{contact.form.first_name}}</label>
+				<input
+					id="{{ formId}}-first-name"
+					name="contact[first_name]"
+					value="{{ form[first_name] }}"
+					aria-required="true"
+					type="text"
+                    placeholder="First Name"
+				>
+			</div>
+			<div class="user-last-name">
+				<label for="{{ formId }}-name" >{{contact.form.last_name}}</label>
+				<input
+					id="{{ formId}}-last-name"
+					name="contact[last_name]"
+					value="{{ form[last_name] }}"
+					aria-required="true"
+					type="text"
+                    placeholder="Last Name"
+				>
+			</div>
+		</div>
+		<div class="row single-row">
+			<div class="user-company-name">
+				<label for="{{ formId }}-company-name" >{{contact.form.company_name}}</label>
+				<input
+					id="{{ formId}}-company-name"
+					name="contact[company_name]"
+					value="{{ form[company_name] }}"
+					required="true"
+					type="text"
+                    placeholder="Company Name"
+				>
+			</div>
+  		</div>
+		<div class="row">
+			<div class="user-email">
+				<label for="{{ formId }}-email">{{contact.form.email}}</label>
+				<input
+					id="{{ formId}}-first-name"
+					name="contact[first_name]"
+					value="{{ form[first_name] }}"
+					required="true"
+					type="email"
+                    placeholder="Email"
+				>
+			</div>
+			<div class="user-phone-number">
+				<label for="{{ formId }}-phone-number" >{{contact-form.phone}}</label>
+				<input type="text"
+					id="{{ formId}}-phone"
+					name="contact[phone]"
+					value="{{ form[phone] }}"
+					required="false"
+					type="tel"
+					pattern="[0]{1}[0-9]{10}"
+                    placeholder="Phone(Optional)"
+				>
+			</div>
+		</div>
+		<div class="row">
+			<div class="user-message">
+				<label for="{{ formId }}-message">{{contact.form.message}}</label>
+				<textarea 
+					name="contact[body]" 
+					id="{{ formId}}-message"
+					value="{{ formId }}-message"
+					type="text"
+					required="true"
+                    placeholder="What are you think..."
+					></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<button type="submit" class="button">
+				Send
+			  </button>
+		</div>
+  	{% endform %}
+</div>
+
+{% schema %}
+  {
+  "name": "new contact form",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "New Contact Form"
+    }
+  ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+
+{% endstylesheet %}
